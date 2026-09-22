@@ -2,6 +2,29 @@
 
 using namespace std;
 
+int process(int*& arr, int size)
+{
+    int negativeIndex = -1;
+
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] < 0)
+        {
+            negativeIndex = i;
+            break;
+        }
+    }
+
+    if (negativeIndex == -1)
+    {
+        return size;
+    }
+
+    int newSize = negativeIndex;
+
+    return newSize;
+}
+
 int main()
 {
     int N;
@@ -26,6 +49,7 @@ int main()
     {
         cout << arr[i] << " ";
     }
+
 
     cout << endl;
 }
