@@ -22,6 +22,17 @@ int process(int*& arr, int size)
 
     int newSize = negativeIndex;
 
+    int* newArr = new int[newSize]{};
+
+    for (int i = 0; i < newSize; i++)
+    {
+        newArr[i] = arr[i];
+    }
+
+    delete[] arr;
+
+    arr = newArr;
+
     return newSize;
 }
 
@@ -33,8 +44,6 @@ int main()
     cin >> N;
 
     int* arr = new int[N]{};
-
-    return 0;
 
     cout << "Введите элементы массива:" << endl;
 
@@ -50,6 +59,13 @@ int main()
         cout << arr[i] << " ";
     }
 
-
     cout << endl;
+
+    int newSize = process(arr, N);
+
+    delete[] arr;
+
+    arr = nullptr;
+
+    return 0;
 }
