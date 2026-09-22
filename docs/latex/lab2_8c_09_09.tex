@@ -1,0 +1,58 @@
+\doxysection{lab2.\+c++ File Reference}
+\hypertarget{lab2_8c_09_09}{}\label{lab2_8c_09_09}\index{lab2.c++@{lab2.c++}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{lab2_8c_09_09_a1ff983359ed3cd9eaec93c61d2f2f073}{process}} (int \texorpdfstring{$\ast$}{*}\&arr, int size)
+\begin{DoxyCompactList}\small\item\em Обрабатывает динамический массив и удаляет все элементы, начиная с первого отрицательного элемента. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{lab2_8c_09_09_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Точка входа в программу. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{lab2_8c_09_09_doc-func-members}
+\Hypertarget{lab2_8c_09_09_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{lab2_8c_09_09_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{lab2.c++@{lab2.c++}!main@{main}}
+\index{main@{main}!lab2.c++@{lab2.c++}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{lab2_8c_09_09_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Точка входа в программу. 
+
+Запрашивает у пользователя размер и элементы динамического массива, выводит исходный массив, обрабатывает его с помощью функции \doxylink{lab2_8c_09_09_a1ff983359ed3cd9eaec93c61d2f2f073}{process()} и выводит результат.
+
+\begin{DoxyReturn}{Returns}
+0 При успешном завершении программы.
+\end{DoxyReturn}
+В конце работы программы выделенная динамическая память освобождается с помощью delete\+[], после чего указатель arr обнуляется. \Hypertarget{lab2_8c_09_09_a1ff983359ed3cd9eaec93c61d2f2f073}\index{lab2.c++@{lab2.c++}!process@{process}}
+\index{process@{process}!lab2.c++@{lab2.c++}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily \label{lab2_8c_09_09_a1ff983359ed3cd9eaec93c61d2f2f073} 
+int process (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\&}]{arr}{, }\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Обрабатывает динамический массив и удаляет все элементы, начиная с первого отрицательного элемента. 
+
+Функция ищет первый отрицательный элемент в массиве. Если отрицательный элемент найден, создаётся новый динамический массив, содержащий только элементы до него. Старая память освобождается, а указатель arr получает адрес нового массива.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Ссылка на указатель динамического массива. \\
+\hline
+{\em size} & Размер исходного массива. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Новый размер массива. Если отрицательных элементов нет, возвращается исходный размер.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+После выполнения функции указатель arr указывает на новый массив, если в исходном массиве был найден отрицательный элемент. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Переданный массив должен быть выделен с помощью new\+[]. 
+\end{DoxyWarning}
