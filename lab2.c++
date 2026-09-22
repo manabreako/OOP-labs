@@ -1,7 +1,5 @@
 #include <iostream>
-
 using namespace std;
-
 int process(int*& arr, int size)
 {
     int negativeIndex = -1;
@@ -21,30 +19,23 @@ int process(int*& arr, int size)
     }
 
     int newSize = negativeIndex;
-
     int* newArr = new int[newSize]{};
 
     for (int i = 0; i < newSize; i++)
     {
         newArr[i] = arr[i];
     }
-
     delete[] arr;
-
     arr = newArr;
-
     return newSize;
 }
 
 int main()
 {
     int N;
-
     cout << "Введите размер массива: ";
     cin >> N;
-
     int* arr = new int[N]{};
-
     cout << "Введите элементы массива:" << endl;
 
     for (int i = 0; i < N; i++)
@@ -60,12 +51,22 @@ int main()
     }
 
     cout << endl;
-
     int newSize = process(arr, N);
+    cout << "Результат: ";
 
+    for (int i = 0; i < newSize; i++)
+    {
+        cout << arr[i] << " ";
+    }
+
+    cout << endl;
     delete[] arr;
-
     arr = nullptr;
 
+    if (arr == nullptr)
+    {
+        cout << "arr == nullptr" << endl;
+        cout << "Указатель безопасно обнулён." << endl;
+    }
     return 0;
 }
