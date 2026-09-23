@@ -10,7 +10,7 @@
  * @author Куртнебиев Р.Р.
  * @date 22.09.2026
  */
-
+#include <windows.h>
 #include <iostream>
 using namespace std;
 
@@ -52,7 +52,7 @@ int process(int*& arr, int size)
     }
 
     int newSize = negativeIndex;
-    int* newArr = new int[newSize]{};
+    int* newArr = new int[newSize];
 
     for (int i = 0; i < newSize; i++)
     {
@@ -79,10 +79,12 @@ int process(int*& arr, int size)
 
 int main()
 {
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
     int N;
     cout << "Введите размер массива: ";
     cin >> N;
-    int* arr = new int[N]{};
+    int* arr = new int[N];
     cout << "Введите элементы массива:" << endl;
 
     for (int i = 0; i < N; i++)
