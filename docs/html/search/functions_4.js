@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['printarray_0',['printArray',['../labs1_8c_09_09.html#a7ead234ed7aaaef6ebaa2f21209a52dc',1,'labs1.c++']]],
-  ['printsafe_1',['printSafe',['../lab3_8c_09_09.html#a7351a105bbeff3b7b137f744fb529256',1,'lab3.c++']]],
-  ['process_2',['process',['../lab2_8c_09_09.html#a1ff983359ed3cd9eaec93c61d2f2f073',1,'lab2.c++']]]
+  ['main_0',['main',['../lab2_8c_09_09.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;lab2.c++'],['../lab3_8c_09_09.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;lab3.c++'],['../lab4_8c_09_09.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;lab4.c++'],['../labs1_8c_09_09.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;labs1.c++']]],
+  ['multiplybytwo_1',['multiplyByTwo',['../labs1_8c_09_09.html#ab3a1e0edf7078e3c1b97da7b4a552f05',1,'labs1.c++']]]
 ];
