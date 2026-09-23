@@ -24,7 +24,6 @@ int& getElement(SafeArray& arr, int index)
     {
         cout << "Ошибка: индекс выходит за границы массива!" << endl;
 
-        // Статическая переменная-заглушка
         static int errorValue = 0;
 
         return errorValue;
@@ -41,6 +40,44 @@ void printSafe(const SafeArray& arr)
     }
 
     cout << endl;
+}
+
+void reSizeArray(SafeArray& arr, int newSize)
+{
+    if (newSize < arr.size)
+    {
+        cout << "Удалённые элементы: ";
+
+        for (int i = newSize; i < arr.size; i++)
+        {
+            cout << arr.data[i] << " ";
+        }
+
+        cout << endl;
+    }
+
+    int* newData = new int[newSize]{};
+
+    int copySize;
+
+    if (newSize < arr.size)
+    {
+        copySize = newSize;
+    }
+    else
+    {
+        copySize = arr.size;
+    }
+
+    for (int i = 0; i < copySize; i++)
+    {
+        newData[i] = arr.data[i];
+    }
+
+    delete[] arr.data;
+
+    arr.data = newData;
+    arr.size = newSize;
 }
 
 int main()
