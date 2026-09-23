@@ -118,5 +118,12 @@ int main()
     cout << "Массив после увеличения: ";
     printSafe(myArr);
 
+    delete[] myArr.data;
+    myArr.data = nullptr;
+    myArr.size = 0;
+
+    cout << endl;
+    cout << "Память освобождена, указатель обнулён." << endl;
+
     return 0;
 }
