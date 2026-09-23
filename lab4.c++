@@ -14,3 +14,14 @@ int** allocateMatrix(int rows, int cols)
 
     return matrix;
 }
+
+void fillMatrix(int** matrix, int rows, int cols)
+{
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            cin >> matrix[i][j];
+        }
+    }
+}
