@@ -68,3 +68,24 @@ void freeMatrix(int** matrix, int rows)
 
     delete[] matrix;
 }
+
+int main()
+{
+    int rows;
+    int cols;
+
+    cout << "Введите количество строк: ";
+    cin >> rows;
+
+    cout << "Введите количество столбцов: ";
+    cin >> cols;
+
+    int** matrix = allocateMatrix(rows, cols);
+
+    cout << "Введите элементы матрицы:" << endl;
+    fillMatrix(matrix, rows, cols);
+
+    freeMatrix(matrix, rows);
+
+    return 0;
+}
