@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include <windows.h>
 using namespace std;
 
 int** allocateMatrix(int rows, int cols)
@@ -71,6 +71,8 @@ void freeMatrix(int** matrix, int rows)
 
 int main()
 {
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
     int rows;
     int cols;
 
@@ -84,6 +86,12 @@ int main()
 
     cout << "Введите элементы матрицы:" << endl;
     fillMatrix(matrix, rows, cols);
+
+    printMatrix(matrix, rows, cols);
+
+    printMatrix(matrix, rows, cols, true, "Оценки студентов");
+
+    printMatrix(matrix, rows, cols, false, "Матрица без рамки");
 
     freeMatrix(matrix, rows);
 
