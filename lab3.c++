@@ -102,5 +102,21 @@ int main()
     cout << "После попытки обратиться за границу: ";
     printSafe(myArr);
 
+    cout << endl;
+    cout << "Уменьшаем массив с 5 до 3 элементов:" << endl;
+
+    reSizeArray(myArr, 3);
+
+    cout << "Массив после уменьшения: ";
+    printSafe(myArr);
+
+    cout << endl;
+    cout << "Увеличиваем массив с 3 до 6 элементов:" << endl;
+
+    reSizeArray(myArr, 6);
+
+    cout << "Массив после увеличения: ";
+    printSafe(myArr);
+
     return 0;
 }
