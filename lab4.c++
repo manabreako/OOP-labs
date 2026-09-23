@@ -58,3 +58,13 @@ void printMatrix(int** matrix, int rows, int cols,
         cout << "------------------------" << endl;
     }
 }
+
+void freeMatrix(int** matrix, int rows)
+{
+    for (int i = 0; i < rows; i++)
+    {
+        delete[] matrix[i];
+    }
+
+    delete[] matrix;
+}
