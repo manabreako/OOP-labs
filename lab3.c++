@@ -17,3 +17,18 @@ SafeArray createArray(int size)
 
     return arr;
 }
+
+int& getElement(SafeArray& arr, int index)
+{
+
+    if (index < 0 || index >= arr.size)
+    {
+        cout << "Ошибка: индекс выходит за границы массива!" << endl;
+
+        static int errorValue = 0;
+
+        return errorValue;
+    }
+
+    return arr.data[index];
+}
