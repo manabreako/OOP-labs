@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fillarray_0',['fillArray',['../labs1_8c_09_09.html#afa6a170da18a01e35c0a869ec25c1b5f',1,'labs1.c++']]]
+  ['createarray_0',['createArray',['../lab3_8c_09_09.html#a7ff63be79ad745808c2835d23619453c',1,'lab3.c++']]]
 ];

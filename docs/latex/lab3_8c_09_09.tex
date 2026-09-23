@@ -1,0 +1,139 @@
+\doxysection{lab3.\+c++ File Reference}
+\hypertarget{lab3_8c_09_09}{}\label{lab3_8c_09_09}\index{lab3.c++@{lab3.c++}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$windows.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}}
+\begin{DoxyCompactList}\small\item\em Структура для хранения динамического массива. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \doxymbox{\hyperlink{lab3_8c_09_09_a7ff63be79ad745808c2835d23619453c}{create\+Array}} (int size)
+\begin{DoxyCompactList}\small\item\em Создаёт динамический массив заданного размера. \end{DoxyCompactList}\item 
+int \& \doxymbox{\hyperlink{lab3_8c_09_09_a96b5fa358374961176edf6d8e54cfe1d}{get\+Element}} (\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&arr, int index)
+\begin{DoxyCompactList}\small\item\em Безопасно получает элемент массива по индексу. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{lab3_8c_09_09_a7351a105bbeff3b7b137f744fb529256}{print\+Safe}} (const \doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&arr)
+\begin{DoxyCompactList}\small\item\em Выводит содержимое массива на экран. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{lab3_8c_09_09_a4830250a472974ce4e2dd8502be2109e}{re\+Size\+Array}} (\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&arr, int new\+Size)
+\begin{DoxyCompactList}\small\item\em Изменяет размер динамического массива. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{lab3_8c_09_09_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Точка входа в программу. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{lab3_8c_09_09_doc-func-members}
+\Hypertarget{lab3_8c_09_09_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{lab3_8c_09_09_a7ff63be79ad745808c2835d23619453c}\index{lab3.c++@{lab3.c++}!createArray@{createArray}}
+\index{createArray@{createArray}!lab3.c++@{lab3.c++}}
+\doxysubsubsection{\texorpdfstring{createArray()}{createArray()}}
+{\footnotesize\ttfamily \label{lab3_8c_09_09_a7ff63be79ad745808c2835d23619453c} 
+\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} create\+Array (\begin{DoxyParamCaption}\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Создаёт динамический массив заданного размера. 
+
+Выделяет память под массив целых чисел и заполняет все его элементы нулевыми значениями.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Размер создаваемого массива. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_safe_array}{Safe\+Array} Структура с созданным массивом и его размером.
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Параметр size должен быть неотрицательным. 
+\end{DoxyWarning}
+\Hypertarget{lab3_8c_09_09_a96b5fa358374961176edf6d8e54cfe1d}\index{lab3.c++@{lab3.c++}!getElement@{getElement}}
+\index{getElement@{getElement}!lab3.c++@{lab3.c++}}
+\doxysubsubsection{\texorpdfstring{getElement()}{getElement()}}
+{\footnotesize\ttfamily \label{lab3_8c_09_09_a96b5fa358374961176edf6d8e54cfe1d} 
+int \& get\+Element (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&}]{arr}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Безопасно получает элемент массива по индексу. 
+
+Проверяет, находится ли указанный индекс в допустимых границах массива. Если индекс корректный, возвращается ссылка на элемент. При выходе за границы выводится сообщение об ошибке.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Ссылка на структуру \doxylink{struct_safe_array}{Safe\+Array}. \\
+\hline
+{\em index} & Индекс элемента, который необходимо получить. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на элемент массива. При некорректном индексе возвращается ссылка на статическую переменную error\+Value.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Возвращаемая ссылка позволяет не только прочитать, но и изменить значение элемента массива.
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+При некорректном индексе изменение возвращаемого значения не изменяет исходный массив. 
+\end{DoxyWarning}
+\Hypertarget{lab3_8c_09_09_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{lab3.c++@{lab3.c++}!main@{main}}
+\index{main@{main}!lab3.c++@{lab3.c++}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{lab3_8c_09_09_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Точка входа в программу. 
+
+Создаёт безопасный динамический массив, заполняет его, изменяет отдельный элемент, проверяет выход за границы, уменьшает и увеличивает размер массива.
+
+\begin{DoxyReturn}{Returns}
+0 При успешном завершении программы.
+\end{DoxyReturn}
+В конце работы программы динамическая память освобождается, указатель на массив обнуляется, а размер устанавливается в 0. \Hypertarget{lab3_8c_09_09_a7351a105bbeff3b7b137f744fb529256}\index{lab3.c++@{lab3.c++}!printSafe@{printSafe}}
+\index{printSafe@{printSafe}!lab3.c++@{lab3.c++}}
+\doxysubsubsection{\texorpdfstring{printSafe()}{printSafe()}}
+{\footnotesize\ttfamily \label{lab3_8c_09_09_a7351a105bbeff3b7b137f744fb529256} 
+void print\+Safe (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+Выводит содержимое массива на экран. 
+
+Последовательно выводит все элементы массива через пробел.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Константная ссылка на структуру \doxylink{struct_safe_array}{Safe\+Array}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Функция не изменяет содержимое массива. 
+\end{DoxyNote}
+\Hypertarget{lab3_8c_09_09_a4830250a472974ce4e2dd8502be2109e}\index{lab3.c++@{lab3.c++}!reSizeArray@{reSizeArray}}
+\index{reSizeArray@{reSizeArray}!lab3.c++@{lab3.c++}}
+\doxysubsubsection{\texorpdfstring{reSizeArray()}{reSizeArray()}}
+{\footnotesize\ttfamily \label{lab3_8c_09_09_a4830250a472974ce4e2dd8502be2109e} 
+void re\+Size\+Array (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&}]{arr}{, }\item[{int}]{new\+Size}{}\end{DoxyParamCaption})}
+
+
+
+Изменяет размер динамического массива. 
+
+Создаёт новый массив указанного размера и копирует в него существующие элементы старого массива.
+
+Если новый размер меньше текущего, лишние элементы выводятся перед удалением.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Ссылка на структуру \doxylink{struct_safe_array}{Safe\+Array}, размер которой изменяется. \\
+\hline
+{\em new\+Size} & Новый размер массива.\\
+\hline
+\end{DoxyParams}
+При уменьшении массива копируются только элементы, которые помещаются в новый размер. При увеличении массива все существующие элементы сохраняются, а новые элементы инициализируются нулями.
+
+\begin{DoxyWarning}{Warning}
+Параметр new\+Size должен быть неотрицательным. 
+\end{DoxyWarning}
