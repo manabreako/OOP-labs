@@ -1,0 +1,123 @@
+\doxysection{labs1.\+c++ File Reference}
+\hypertarget{labs1_8c_09_09}{}\label{labs1_8c_09_09}\index{labs1.c++@{labs1.c++}}
+
+
+Лабораторная работа №1. Работа со статическим массивом.  
+
+
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$cstdlib$>$}\newline
+{\ttfamily \+\#include $<$ctime$>$}\newline
+{\ttfamily \+\#include $<$windows.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{labs1_8c_09_09_afa6a170da18a01e35c0a869ec25c1b5f}{fill\+Array}} (int(\&arr)\+[10]\+)
+\begin{DoxyCompactList}\small\item\em Заполняет массив случайными числами. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{labs1_8c_09_09_a7ead234ed7aaaef6ebaa2f21209a52dc}{print\+Array}} (const int(\&arr)\+[10]\+)
+\begin{DoxyCompactList}\small\item\em Выводит элементы массива на экран. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{labs1_8c_09_09_aeaafa5638540028983727d61f3026b2a}{swap\+Elements}} (int(\&arr)\+[10]\+, int \&index1, int \&index2)
+\begin{DoxyCompactList}\small\item\em Меняет местами два элемента массива. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{labs1_8c_09_09_ab3a1e0edf7078e3c1b97da7b4a552f05}{multiply\+By\+Two}} (int(\&arr)\+[10]\+)
+\begin{DoxyCompactList}\small\item\em Умножает каждый элемент массива на 2. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{labs1_8c_09_09_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Главная функция программы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Лабораторная работа №1. Работа со статическим массивом. 
+
+Программа создаёт массив из 10 целых чисел, заполняет его случайными значениями, выводит массив, меняет местами два элемента и умножает все элементы на 2.
+
+\begin{DoxyAuthor}{Author}
+Куртнебиев Р. Р. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+21.\+09.\+2026 
+\end{DoxyDate}
+
+
+\label{labs1_8c_09_09_doc-func-members}
+\Hypertarget{labs1_8c_09_09_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{labs1_8c_09_09_afa6a170da18a01e35c0a869ec25c1b5f}\index{labs1.c++@{labs1.c++}!fillArray@{fillArray}}
+\index{fillArray@{fillArray}!labs1.c++@{labs1.c++}}
+\doxysubsubsection{\texorpdfstring{fillArray()}{fillArray()}}
+{\footnotesize\ttfamily \label{labs1_8c_09_09_afa6a170da18a01e35c0a869ec25c1b5f} 
+void fill\+Array (\begin{DoxyParamCaption}\item[{int(\&)}]{arr}{\+[10]}\end{DoxyParamCaption})}
+
+
+
+Заполняет массив случайными числами. 
+
+Каждому элементу массива присваивается случайное число от 0 до 99.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Массив из 10 целых чисел. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{labs1_8c_09_09_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{labs1.c++@{labs1.c++}!main@{main}}
+\index{main@{main}!labs1.c++@{labs1.c++}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{labs1_8c_09_09_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Главная функция программы. 
+
+Создаёт массив из 10 целых чисел, заполняет его случайными значениями, выводит массив, меняет местами первые два элемента, а затем умножает все элементы на 2.
+
+\begin{DoxyReturn}{Returns}
+0 Если программа завершилась успешно. 
+\end{DoxyReturn}
+\Hypertarget{labs1_8c_09_09_ab3a1e0edf7078e3c1b97da7b4a552f05}\index{labs1.c++@{labs1.c++}!multiplyByTwo@{multiplyByTwo}}
+\index{multiplyByTwo@{multiplyByTwo}!labs1.c++@{labs1.c++}}
+\doxysubsubsection{\texorpdfstring{multiplyByTwo()}{multiplyByTwo()}}
+{\footnotesize\ttfamily \label{labs1_8c_09_09_ab3a1e0edf7078e3c1b97da7b4a552f05} 
+void multiply\+By\+Two (\begin{DoxyParamCaption}\item[{int(\&)}]{arr}{\+[10]}\end{DoxyParamCaption})}
+
+
+
+Умножает каждый элемент массива на 2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Массив из 10 целых чисел. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{labs1_8c_09_09_a7ead234ed7aaaef6ebaa2f21209a52dc}\index{labs1.c++@{labs1.c++}!printArray@{printArray}}
+\index{printArray@{printArray}!labs1.c++@{labs1.c++}}
+\doxysubsubsection{\texorpdfstring{printArray()}{printArray()}}
+{\footnotesize\ttfamily \label{labs1_8c_09_09_a7ead234ed7aaaef6ebaa2f21209a52dc} 
+void print\+Array (\begin{DoxyParamCaption}\item[{const int(\&)}]{arr}{\+[10]}\end{DoxyParamCaption})}
+
+
+
+Выводит элементы массива на экран. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Массив из 10 целых чисел. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{labs1_8c_09_09_aeaafa5638540028983727d61f3026b2a}\index{labs1.c++@{labs1.c++}!swapElements@{swapElements}}
+\index{swapElements@{swapElements}!labs1.c++@{labs1.c++}}
+\doxysubsubsection{\texorpdfstring{swapElements()}{swapElements()}}
+{\footnotesize\ttfamily \label{labs1_8c_09_09_aeaafa5638540028983727d61f3026b2a} 
+void swap\+Elements (\begin{DoxyParamCaption}\item[{int(\&)}]{arr}{\+[10], }\item[{int \&}]{index1}{, }\item[{int \&}]{index2}{}\end{DoxyParamCaption})}
+
+
+
+Меняет местами два элемента массива. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & Массив из 10 целых чисел. \\
+\hline
+{\em index1} & Индекс первого элемента. \\
+\hline
+{\em index2} & Индекс второго элемента. \\
+\hline
+\end{DoxyParams}

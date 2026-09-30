@@ -1,0 +1,135 @@
+\doxysection{lab4.\+c++ File Reference}
+\hypertarget{lab4_8c_09_09}{}\label{lab4_8c_09_09}\index{lab4.c++@{lab4.c++}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$windows.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{lab4_8c_09_09_a316a1e4a31e8d114fc40e8a6d5cf6d1f}{allocate\+Matrix}} (int rows, int cols)
+\begin{DoxyCompactList}\small\item\em Выделяет память для двумерной динамической матрицы. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{lab4_8c_09_09_a57b3e14ecd6179a364c9e60ca2131531}{fill\+Matrix}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}matrix, int rows, int cols)
+\begin{DoxyCompactList}\small\item\em Заполняет матрицу значениями с клавиатуры. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{lab4_8c_09_09_a8eb1f7a0cdbc814d915bc187ef0c4709}{print\+Matrix}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}matrix, int rows, int cols, bool show\+Borders=true, string title="{}Matrix"{})
+\begin{DoxyCompactList}\small\item\em Выводит матрицу на экран. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{lab4_8c_09_09_a29b6394c95f08e982275bdcd9b919ef0}{free\+Matrix}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}matrix, int rows)
+\begin{DoxyCompactList}\small\item\em Освобождает память, выделенную под матрицу. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{lab4_8c_09_09_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Точка входа в программу. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{lab4_8c_09_09_doc-func-members}
+\Hypertarget{lab4_8c_09_09_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{lab4_8c_09_09_a316a1e4a31e8d114fc40e8a6d5cf6d1f}\index{lab4.c++@{lab4.c++}!allocateMatrix@{allocateMatrix}}
+\index{allocateMatrix@{allocateMatrix}!lab4.c++@{lab4.c++}}
+\doxysubsubsection{\texorpdfstring{allocateMatrix()}{allocateMatrix()}}
+{\footnotesize\ttfamily \label{lab4_8c_09_09_a316a1e4a31e8d114fc40e8a6d5cf6d1f} 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} allocate\+Matrix (\begin{DoxyParamCaption}\item[{int}]{rows}{, }\item[{int}]{cols}{}\end{DoxyParamCaption})}
+
+
+
+Выделяет память для двумерной динамической матрицы. 
+
+Создаёт массив указателей на строки, после чего для каждой строки выделяет память под заданное количество элементов.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & Количество строк матрицы. \\
+\hline
+{\em cols} & Количество столбцов матрицы. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Указатель на созданную двумерную матрицу.
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Параметры rows и cols должны быть неотрицательными. 
+\end{DoxyWarning}
+\Hypertarget{lab4_8c_09_09_a57b3e14ecd6179a364c9e60ca2131531}\index{lab4.c++@{lab4.c++}!fillMatrix@{fillMatrix}}
+\index{fillMatrix@{fillMatrix}!lab4.c++@{lab4.c++}}
+\doxysubsubsection{\texorpdfstring{fillMatrix()}{fillMatrix()}}
+{\footnotesize\ttfamily \label{lab4_8c_09_09_a57b3e14ecd6179a364c9e60ca2131531} 
+void fill\+Matrix (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{int}]{rows}{, }\item[{int}]{cols}{}\end{DoxyParamCaption})}
+
+
+
+Заполняет матрицу значениями с клавиатуры. 
+
+Последовательно считывает значения для каждого элемента двумерной матрицы.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Указатель на двумерную матрицу. \\
+\hline
+{\em rows} & Количество строк матрицы. \\
+\hline
+{\em cols} & Количество столбцов матрицы.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Значения вводятся построчно слева направо. 
+\end{DoxyNote}
+\Hypertarget{lab4_8c_09_09_a29b6394c95f08e982275bdcd9b919ef0}\index{lab4.c++@{lab4.c++}!freeMatrix@{freeMatrix}}
+\index{freeMatrix@{freeMatrix}!lab4.c++@{lab4.c++}}
+\doxysubsubsection{\texorpdfstring{freeMatrix()}{freeMatrix()}}
+{\footnotesize\ttfamily \label{lab4_8c_09_09_a29b6394c95f08e982275bdcd9b919ef0} 
+void free\+Matrix (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{int}]{rows}{}\end{DoxyParamCaption})}
+
+
+
+Освобождает память, выделенную под матрицу. 
+
+Сначала освобождает память каждой строки матрицы, после чего освобождает массив указателей на строки.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Указатель на двумерную матрицу. \\
+\hline
+{\em rows} & Количество строк матрицы.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Функция должна вызываться после завершения работы с динамической матрицей. 
+\end{DoxyNote}
+\Hypertarget{lab4_8c_09_09_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{lab4.c++@{lab4.c++}!main@{main}}
+\index{main@{main}!lab4.c++@{lab4.c++}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{lab4_8c_09_09_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Точка входа в программу. 
+
+Запрашивает у пользователя количество строк и столбцов, создаёт динамическую матрицу, заполняет её значениями и демонстрирует различные варианты её вывода.
+
+\begin{DoxyReturn}{Returns}
+0 При успешном завершении программы.
+\end{DoxyReturn}
+Матрица выводится три раза: с параметрами по умолчанию, с пользовательским заголовком и без рамки. После завершения работы выделенная память освобождается с помощью функции \doxylink{lab4_8c_09_09_a29b6394c95f08e982275bdcd9b919ef0}{free\+Matrix()}. \Hypertarget{lab4_8c_09_09_a8eb1f7a0cdbc814d915bc187ef0c4709}\index{lab4.c++@{lab4.c++}!printMatrix@{printMatrix}}
+\index{printMatrix@{printMatrix}!lab4.c++@{lab4.c++}}
+\doxysubsubsection{\texorpdfstring{printMatrix()}{printMatrix()}}
+{\footnotesize\ttfamily \label{lab4_8c_09_09_a8eb1f7a0cdbc814d915bc187ef0c4709} 
+void print\+Matrix (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{int}]{rows}{, }\item[{int}]{cols}{, }\item[{bool}]{show\+Borders}{ = {\ttfamily true}, }\item[{string}]{title}{ = {\ttfamily "{}Matrix"{}}}\end{DoxyParamCaption})}
+
+
+
+Выводит матрицу на экран. 
+
+Выводит заголовок и элементы матрицы. При необходимости вокруг матрицы отображается рамка.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Указатель на двумерную матрицу. \\
+\hline
+{\em rows} & Количество строк матрицы. \\
+\hline
+{\em cols} & Количество столбцов матрицы. \\
+\hline
+{\em show\+Borders} & Флаг отображения рамки. По умолчанию true. \\
+\hline
+{\em title} & Заголовок матрицы. По умолчанию "{}\+Matrix"{}.\\
+\hline
+\end{DoxyParams}
+Если параметр show\+Borders равен true, вокруг матрицы выводится рамка. Если false, матрица выводится без рамки. 
